@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/83192247/167336030-6527f872-1af3-4b0d-a9de-0f136b42ed6c.png)
+
 ------------
 
 ### **Source code for my little corner of the internet.**
@@ -9,10 +9,6 @@
 - Utilizes Discord webhooks to receive messages from those who fill out the contact form
 - Uses TailwindCSS, for easy light/dark theme configuration
 
-**Redirects:**
-- https://cnrad.dev/github
-- https://cnrad.dev/twitter
-- https://cnrad.dev/linkedin
 
 
 <sub>**Design heavily inspired by [Alistair](https://github.com/alii)'s [personal site](https://alistair.sh)**</sub>
