@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import {
     SiVisualstudiocode,
   SiDocker,
+  SiBootstrap,
   SiGit,
   SiGithub,
   SiNextdotjs as SiNextJs,
@@ -74,7 +75,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
                     <TechItem icon={SiDocker} name="Docker" />
                     <TechItem icon={SiGithub} name="Github" />
                     <TechItem icon={SiFlutter} name="Flutter" />
-                    <TechItem icon={SiPython} name="Python" />
+                    <TechItem icon={SiBootstrap} name="Bootstrap" />
             </div>
 
             <h2 className="font-medium text-3xl mb-4">Projects 🛠️</h2>
