@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                 />
                 <meta name="description" content="Seemo - Software Engineer" />
                 <meta name="author" content="Seemo" />
-                
+                <link rel="vercel.svg" href="/vercel.svg" />
             </Head>
 
             <div className="text-black dark:text-white flex flex-row justify-center w-full h-full bg-gradient-to-bl from-white to-[#fff] dark:from-black dark:to-[#0d131f] min-h-screen">
