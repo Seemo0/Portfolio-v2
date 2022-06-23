@@ -81,7 +81,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
             <p className="text-gray-800 dark:text-gray-300 leading-6 font-light tracking-wide mb-6">
                 In my free time, I enjoy creating open source projects on{" "}
                 <a
-                    href="https://github.com/cnrad"
+                    href="https://github.com/Seemo0"
                     rel="noreferrer"
                     className="font-semibold text-violet-500 hover:underline"
                 >
