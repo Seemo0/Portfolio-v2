@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
                     </AnimatePresence>
                     <Footer />
                 </div>
-                <Spotify />
+                
             </div>
         </>
     );

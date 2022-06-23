@@ -6,7 +6,7 @@ const TimeStatus = () => {
 
     function updateTime() {
         let current = new Date().toLocaleString("ar-Mo", { timeZone: "UTC" });
-        setTime(`${current.slice(-10, -6)}${current.slice(-3, -1)}.M.`);
+        setTime(`${current.slice(-11, -6)}${current.slice(-3, -1)}.M.`);
         setTimeout(updateTime, 60 * 1000);
 
         if (new Date().getHours() < 7) setAwake(false);
