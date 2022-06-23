@@ -58,24 +58,24 @@ const Index = ({ stats, topRepos }: AppProps) => {
                 and my projects. Below is a list of technologies and languages I've had experience with in the past, or
                 use currently.
             </p>
-            <div className="w-full flex flex-wrap flex-row justify-center p-1 border border-slate-800 rounded-md bg-white/10 dark:bg-black/10 mb-12">
-            <TechItem icon={SiTypescript} name="TypeScript" />
-                    <TechItem icon={SiVisualstudiocode} name="VSCode" />
-                    <TechItem icon={SiReact} name="React.js" />
-                    <TechItem icon={SiNodeJs} name="Node.js" />
-                    <TechItem icon={SiJavascript} name="JavaScript" />
-                    <TechItem icon={SiYarn} name="Yarn" />
-                    <TechItem icon={SiNextJs} name="Next.js" />
-                    <TechItem icon={SiTailwindCSS} name="TailwindCSS" />
-                    <TechItem icon={SiVuedotjs} name="Vue.js" />
-                    <TechItem icon={SiMongodb} name="MongoDB" />
-                    <TechItem icon={SiMysql} name="Mysql" />
-                    <TechItem icon={SiExpress} name="Express.js" />
-                    <TechItem icon={SiGit} name="Git" />
-                    <TechItem icon={SiDocker} name="Docker" />
-                    <TechItem icon={SiGithub} name="Github" />
-                    <TechItem icon={SiFlutter} name="Flutter" />
-                    <TechItem icon={SiBootstrap} name="Bootstrap" />
+            <div className="grid grid-cols-3  sm:grid-cols-4   font-light  mb-6">
+                    <TechItem icon={SiTypescript} text="TypeScript" />
+                    <TechItem icon={SiVisualstudiocode} text="VSCode" />
+                    <TechItem icon={SiReact} text="React.js" />
+                    <TechItem icon={SiNodeJs} text="Node.js" />
+                    <TechItem icon={SiJavascript} text="JavaScript" />
+                    <TechItem icon={SiYarn} text="Yarn" />
+                    <TechItem icon={SiNextJs} text="Next.js" />
+                    <TechItem icon={SiTailwindCSS} text="TailwindCSS" />
+                    <TechItem icon={SiVuedotjs} text="Vue.js" />
+                    <TechItem icon={SiMongodb} text="MongoDB" />
+                    <TechItem icon={SiMysql} text="Mysql" />
+                    <TechItem icon={SiExpress} text="Express.js" />
+                    <TechItem icon={SiGit} text="Git" />
+                    <TechItem icon={SiDocker} text="Docker" />
+                    <TechItem icon={SiGithub} text="Github" />
+                    <TechItem icon={SiFlutter} text="Flutter" />
+                    <TechItem icon={SiBootstrap} text="Bootstrap" />
             </div>
 
             <h2 className="font-medium text-3xl mb-4">Projects 🛠️</h2>
