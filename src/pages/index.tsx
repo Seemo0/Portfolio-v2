@@ -96,7 +96,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
                 GitHub. Below
                 are some of my most popular repositories.
             </p>
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 mb-12 gap-2">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 ">
                 {topRepos.map((repo: Record<string, any>) => {
                     return (
                         <RepoItem
