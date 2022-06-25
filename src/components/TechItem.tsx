@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import { Tooltip } from "react-tippy";
 
 interface TechProps {
     text: string;
@@ -7,9 +8,9 @@ interface TechProps {
 
 export const TechItem = ({ text, icon }: TechProps) => {
     return (
-        <li className="flex p-2 space-x-2 ">          
-                <span>{icon({ className: "h-6 w-6" })}</span>
-                <span>{text}</span> 
+        <li className="flex p-2 space-x-2 ">  
+            <span>{icon({ className: "h-6 w-6" })}</span>
+            <span>{text}</span>   
         </li>
     );
 };

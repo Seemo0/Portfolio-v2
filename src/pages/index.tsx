@@ -59,7 +59,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
                 and my projects. Below is a list of technologies and languages I've had experience with in the past, or
                 use currently.
             </p>
-            <div className="grid grid-cols-3  sm:grid-cols-4   font-light  mb-6">
+            <div className="grid grid-cols-3  sm:grid-cols-4 rounded-md border-slate-800 hover:border-sky-400  border-x-2 border-y-2 p-2 font-light  mb-6">
                     <TechItem icon={SiTypescript} text="TypeScript" />
                     <TechItem icon={SiVisualstudiocode} text="VSCode" />
                     <TechItem icon={SiReact} text="React.js" />
