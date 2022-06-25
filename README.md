@@ -11,4 +11,5 @@
 
 
 
-<sub>**Design heavily inspired by [Alistair](https://github.com/alii)'s [personal site](https://alistair.sh)**</sub>
+<sub>**Semo**</sub>
+<sub>**Software Engineer ° 2022**</sub>
