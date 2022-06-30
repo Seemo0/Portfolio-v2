@@ -12,4 +12,5 @@
 
 
 <sub>**Semo**</sub>
-<sub>**Software Engineer ° 2022**</sub>
+
+<sub>**Design heavily inspired by [Cnrad](https://github.com/cnrad)'s [personal site](https://cnrad.dev)**</sub>
