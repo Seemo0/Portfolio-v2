@@ -15,7 +15,7 @@ interface RepoProps {
     language: "Vue" | "JavaScript";
 }
 
-const RepoItem = ({ name, description, stars, forks, language }: RepoProps) => {
+const RepoItem = ({ name, description,  language }: RepoProps) => {
     return (
         <div className="group relative">
         <a href={`https://github.com/Seemo0/${name}`} rel="noreferrer" target="_blank">
