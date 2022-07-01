@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import { AiOutlineStar } from "react-icons/ai";
-import { BiGitRepoForked } from "react-icons/bi";
 
 const Languages = {
     Vue: "#007500",
