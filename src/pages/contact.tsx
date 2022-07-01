@@ -24,7 +24,7 @@ const Talk = () => {
 
             <TimeStatus />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 mb-20 ">
+            <div className="grid ml-30 grid-cols-1 md:grid-cols-3 md:gap-4 mb-20 ">
                 {/* <MessageComponent /> */}
 
                 <div className="row-start-1 md:row-auto">
