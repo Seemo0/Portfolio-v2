@@ -89,7 +89,9 @@ const Nav = () => {
                         href={"https://linkedin.com/in/mohamedouallal"}
                         icon={<SiLinkedin className="w-6 h-6 cursor-pointer" />}
                     />
-                    <LinkButton href={"mailto:medouallal08@gmail.com"} icon={<FiMail className="w-6 h-6 cursor-pointer" />} />
+                    <LinkButton 
+                        href={"mailto:medouallal08@gmail.com"} 
+                        icon={<FiMail className="w-6 h-6 cursor-pointer" />} />
                 </div>
             </motion.div>
 
