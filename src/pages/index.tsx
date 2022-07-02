@@ -76,7 +76,6 @@ const Index = ({ stats, topRepos }: AppProps) => {
                     <TechItem icon={SiGithub} text="Github" />
                     <TechItem icon={SiFlutter} text="Flutter" />
                     <TechItem icon={SiBootstrap} text="Bootstrap" />
-                    <TechItem icon={SiPython} text="Python" />
             </div>
 
             <h2 className="font-medium text-3xl mb-4">Projects 🛠️</h2>
