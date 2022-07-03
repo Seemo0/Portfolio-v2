@@ -118,7 +118,7 @@ export async function getStaticProps() {
     );
 
     const topRepos = repos
-        .sort((a: Record<string, any>, b: Record<string, any>) => a.stargazers_count - b.stargazers_count)
+        .sort((a: Record<string, any>, b: Record<string, any>) => b.stargazers_count - a.stargazers_count)
         .slice(0, 4);
 
     return {
