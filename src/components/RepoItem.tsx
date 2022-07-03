@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 const Languages = {
+    TypeScript: "#2b7489",
     Vue: "#007500",
     JavaScript: "#FEDE00",
 };
@@ -10,7 +11,7 @@ interface RepoProps {
     description: string;
     stars: number;
     forks: number;
-    language: "Vue" | "JavaScript";
+    language: "Vue" | "JavaScript" | "TypeScript";
 }
 
 const RepoItem = ({ name, description,  language }: RepoProps) => {
