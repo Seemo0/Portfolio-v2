@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { AiOutlineStar } from "react-icons/ai";
+import { BiGitRepoForked } from "react-icons/bi";
 
 const Languages = {
     TypeScript: "#2b7489",
