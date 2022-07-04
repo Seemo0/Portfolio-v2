@@ -4,8 +4,9 @@ import { BiGitRepoForked } from "react-icons/bi";
 
 const Languages = {
     TypeScript: "#2b7489",
-    Vue: "#007500",
+    Vue: "#00FFFF",
     JavaScript: "#FEDE00",
+    CSS: "#4CBB17"
 };
 
 interface RepoProps {
@@ -13,7 +14,7 @@ interface RepoProps {
     description: string;
     stars: number;
     forks: number;
-    language: "Vue" | "JavaScript" | "TypeScript";
+    language: "Vue" | "JavaScript" | "CSS" | "TypeScript";
 }
 
 const RepoItem = ({ name, description, stars, forks, language }: RepoProps) => {
