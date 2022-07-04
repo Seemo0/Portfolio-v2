@@ -17,7 +17,6 @@ import {
   SiYarn,
   SiFlutter,
   SiJavascript,
-  SiPython,
   SiMongodb,
 } from "react-icons/si";
 import { TechItem } from "../components/TechItem";
