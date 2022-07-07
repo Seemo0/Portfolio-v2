@@ -12,7 +12,6 @@
 - Uses TailwindCSS, for easy light/dark theme configuration
 
 
-
 <sub>**Semo**</sub>
 
 <sub>**Design heavily inspired by [Cnrad](https://github.com/cnrad)'s [personal site](https://cnrad.dev)**</sub>
