@@ -10,17 +10,16 @@ import { HiMenu, HiX } from "react-icons/hi";
 
 const LandingButton = ({ name, link, selected }: { name: string; link: string; selected: boolean }) => {
     return (
-        <Link href={link}>
-            <a
-                className={classNames(
-                    selected
-                        ? "bg-black/10 dark:bg-[#c8c8dc]/10"
-                        : "bg-transparent hover:bg-gray-700/5 dark:hover:bg-[#c8c8dc]/5 dark:text-white",
-                    "cursor-pointer px-4 py-2 text-sm rounded-md text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-75"
-                )}
-            >
-                {name}
-            </a>
+        <Link
+            href={link}
+            className={classNames(
+                selected
+                    ? "bg-black/10 dark:bg-[#c8c8dc]/10"
+                    : "bg-transparent hover:bg-gray-700/5 dark:hover:bg-[#c8c8dc]/5 dark:text-white",
+                "cursor-pointer px-4 py-2 text-sm rounded-md text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-75"
+            )}
+        >
+            {name}
         </Link>
     );
 };
@@ -37,16 +36,15 @@ const MobileLandingButton = ({
     onClick: () => void;
 }) => {
     return (
-        <Link href={link}>
-            <a
-                className={classNames(
-                    selected ? "bg-black/10 dark:bg-[#c8c8dc]/10" : "bg-transparent dark:text-white",
-                    "flex flex-grow justify-center border border-slate-800/30 cursor-pointer w-auto py-4 text-base text-black/80 dark:text-white/80 transition-all duration-75"
-                )}
-                onClick={onClick}
-            >
-                {name}
-            </a>
+        <Link
+            href={link}
+            className={classNames(
+                selected ? "bg-black/10 dark:bg-[#c8c8dc]/10" : "bg-transparent dark:text-white",
+                "flex flex-grow justify-center border border-slate-800/30 cursor-pointer w-auto py-4 text-base text-black/80 dark:text-white/80 transition-all duration-75"
+            )}
+            onClick={onClick}
+        >
+            {name}
         </Link>
     );
 };
@@ -89,9 +87,10 @@ const Nav = () => {
                         href={"https://linkedin.com/in/mohamedouallal"}
                         icon={<SiLinkedin className="w-6 h-6 cursor-pointer" />}
                     />
-                    <LinkButton 
-                        href={"mailto:contactsemoo@gmail.com"} 
-                        icon={<FiMail className="w-6 h-6 cursor-pointer" />} />
+                    <LinkButton
+                        href={"mailto:mohamedouallal08@gmail.com"}
+                        icon={<FiMail className="w-6 h-6 cursor-pointer" />}
+                    />
                 </div>
             </motion.div>
 
@@ -156,7 +155,7 @@ const Nav = () => {
                                     icon={<SiLinkedin className="w-6 h-6 cursor-pointer" />}
                                 />
                                 <LinkButton
-                                    href={"mailto:contactsemoo@gmail.com"}
+                                    href={"mailto:mohamedouallal08@gmail.com"}
                                     icon={<FiMail className="w-6 h-6 cursor-pointer" />}
                                 />
                             </div>
@@ -167,6 +166,5 @@ const Nav = () => {
         </>
     );
 };
-
 
 export default Nav;
