@@ -1,36 +1,34 @@
+import FormData from "form-data";
+import Mailgun from "mailgun.js";
 import type { NextApiRequest, NextApiResponse } from "next";
-import axios from "axios";
 
-type Data = {
-    email: string;
-    message: string;
-};
+const API_KEY = process.env.MAILGUN_API_KEY || "";
+const DOMAIN = process.env.MAILGUN_DOMAIN || "";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    console.log("Data", req.body);
 
-    const data = req.body as Data;
+    const mailgun = new Mailgun(FormData);
+    const client = mailgun.client({ username: "api", key: API_KEY });
 
-    if (!data) return res.status(500).json({ result: "Nice try :)" });
+    const { email, message } = req.body;
 
-    if (data.message.length < 1 || data.email.length < 1) return res.status(500).json({ result: "FIELD_EMPTY" });
-    if (data.message.length > 1000) return res.status(500).json({ result: "MESSAGE_TOO_LONG" });
-    if (data.email.length > 500) return res.status(500).json({ result: "NAME_TOO_LONG" });
+    const messageData = {
+        from: "Contact Form <contact@semo-dev.vercel.app>",
+        to: "medouallal08@gmail.com",
+        subject: "New Contact Form!",
+        text: `Hello,
+    You have a new form entry from: ${email}.
+    ${message}
+    `,
+    };
 
-    axios
-        .post(process.env.WEBHOOK_URL as string, {
-            embeds: [
-                {
-                    color: 3108090,
-                    title: data.email,
-                    author: {
-                        name: req.headers["x-forwarded-for"] ?? req.socket.remoteAddress ?? "unknown!?",
-                    },
-                    description: data.message,
-                },
-            ],
-        })
-        .then(response => {
-            if (response.data.err) return res.status(500).json({ result: "DISCORD_API_ERROR" });
-            return res.status(200).json({ result: "Success" });
-        });
+    try {
+        const emailRes = await client.messages.create(DOMAIN, messageData);
+        console.log(emailRes);
+    } catch (err: any) {
+        console.error("Error sending email", err);
+    }
+
+    res.status(200).json({ name: "Done" });
 }

@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         <>
             <Head>
                 <meta charSet="utf-8" />
-                <title>Mohamed Ouallal</title>
+                <title>Mohamed Ou</title>
                 <link rel="icon" href="/vercel.svg" />
                 <meta name="viewport" content="width=device-width,initial-scale=1" />
                 <meta name="theme-color" content="#000000" />

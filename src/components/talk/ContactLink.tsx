@@ -1,3 +1,5 @@
+"use client";
+
 import React, { ReactElement } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { animated, useSpring } from "react-spring";

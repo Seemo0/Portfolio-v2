@@ -4,6 +4,7 @@ import { SiTwitter, SiDiscord } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 import { motion } from "framer-motion";
 import TimeStatus from "../components/talk/TimeStatus";
+import MessageComponent from "../components/talk/MessageComponent";
 
 const Talk = () => {
     return (
@@ -23,7 +24,7 @@ const Talk = () => {
             <TimeStatus />
 
             <div className="grid ml-30 grid-cols-1 md:grid-cols-3 md:gap-4 mb-20 ">
-                {/* <MessageComponent /> */}
+                <MessageComponent />
 
                 <div className="row-start-1 md:row-auto">
                     <ContactLink
@@ -41,7 +42,7 @@ const Talk = () => {
                     />
 
                     <ContactLink
-                        name="contactsemoo@gmail.com"
+                        name="mohamedouallal08@gmail.com"
                         icon={<FiMail className="w-6 h-6 text-gray-400" />}
                         link="mailto:contactsemoo@gmail.com"
                         borderColor="hover:border-gray-400/50"

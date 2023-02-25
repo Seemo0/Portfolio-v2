@@ -1,3 +1,5 @@
+"use client";
+
 import axios from "axios";
 import { useRef, useState } from "react";
 import { RiSendPlane2Fill } from "react-icons/ri";
