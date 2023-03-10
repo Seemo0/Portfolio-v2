@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 
 import {
     SiVisualstudiocode,
-  SiDocker,
   SiBootstrap,
   SiGit,
   SiGithub,
