@@ -1,4 +1,3 @@
-import React from "react";
 import ContactLink from "../components/talk/ContactLink";
 import { SiTwitter, SiDiscord } from "react-icons/si";
 import { FiMail } from "react-icons/fi";

@@ -1,5 +1,4 @@
 import { IconType } from "react-icons";
-import { Tooltip } from "react-tippy";
 
 interface TechProps {
     text: string;
