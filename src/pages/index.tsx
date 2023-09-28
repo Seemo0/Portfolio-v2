@@ -38,7 +38,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
         >
             <h1 className="mt-36 font-bold text-4xl md:text-5xl mb-4">Hey, I'm Semo 👋</h1>
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
-                I'm a self-taught software engineer from Morocco. I'm currently pursuing full-stack web
+                I'm a software developer from Morocco. I'm currently pursuing full-stack web
                 development to create stunning user experiences on the front-end, and scalable and secure infrastructure
                 on the backend.
             </p>
