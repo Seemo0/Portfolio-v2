@@ -2,22 +2,24 @@ import { motion } from "framer-motion";
 
 import {
     SiVisualstudiocode,
-  SiBootstrap,
-  SiGit,
-  SiGithub,
-  SiNextdotjs as SiNextJs,
-  SiNodedotjs as SiNodeJs,
-  SiExpress,
-  SiReact,
-  SiMysql,
-  SiVuedotjs,
-  SiTailwindcss as SiTailwindCSS,
-  SiTypescript,
-  SiYarn,
-  SiNpm,
-  SiFlutter,
-  SiJavascript,
-  SiMongodb,
+    SiGit,
+    SiGithub,
+    SiNextdotjs as SiNextJs,
+    SiNodedotjs as SiNodeJs,
+    SiExpress,
+    SiReact,
+    SiSass,
+    SiVuedotjs,
+    SiTailwindcss as SiTailwindCSS,
+    SiTypescript,
+    SiRedux,
+    SiNpm,
+    SiFlutter,
+    SiAmazonaws,
+    SiMongodb,
+    SiNestjs,
+    SiPostgresql,
+    SiDocker
 } from "react-icons/si";
 import { TechItem } from "../components/TechItem";
 import RepoItem from "../components/RepoItem";
@@ -38,9 +40,8 @@ const Index = ({ stats, topRepos }: AppProps) => {
         >
             <h1 className="mt-36 font-bold text-4xl md:text-5xl mb-4">Hey, I'm Semo 👋</h1>
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
-                I'm a software developer from Morocco. I'm currently pursuing full-stack web
-                development to create stunning user experiences on the front-end, and scalable and secure infrastructure
-                on the backend.
+                I'm a software developer from Morocco. I'm currently pursuing full-stack web development to create
+                stunning user experiences on the front-end, and scalable and secure infrastructure on the backend.
             </p>
 
             <h2 className="font-medium text-3xl mb-4">What I Do 💭</h2>
@@ -58,23 +59,25 @@ const Index = ({ stats, topRepos }: AppProps) => {
                 use currently.
             </p>
             <div className="grid grid-cols-3  sm:grid-cols-4 rounded-md border-slate-800 hover:border-sky-400  border-x-2 border-y-2 p-2 font-light  mb-6">
-                    <TechItem icon={SiTypescript} text="TypeScript" />
-                    <TechItem icon={SiVisualstudiocode} text="VSCode" />
-                    <TechItem icon={SiReact} text="React.js" />
-                    <TechItem icon={SiNodeJs} text="Node.js" />
-                    <TechItem icon={SiJavascript} text="JavaScript" />
-                    <TechItem icon={SiYarn} text="Yarn" />
-                    <TechItem icon={SiNextJs} text="Next.js" />
-                    <TechItem icon={SiTailwindCSS} text="TailwindCSS" />
-                    <TechItem icon={SiVuedotjs} text="Vue.js" />
-                    <TechItem icon={SiMongodb} text="MongoDB" />
-                    <TechItem icon={SiMysql} text="Mysql" />
-                    <TechItem icon={SiExpress} text="Express.js" />
-                    <TechItem icon={SiGit} text="Git" />
-                    <TechItem icon={SiNpm} text="Npm" />
-                    <TechItem icon={SiGithub} text="Github" />
-                    <TechItem icon={SiFlutter} text="Flutter" />
-                    <TechItem icon={SiBootstrap} text="Bootstrap" />
+                <TechItem icon={SiTypescript} text="TypeScript" />
+                <TechItem icon={SiGit} text="Git" />
+                <TechItem icon={SiNodeJs} text="Node.js" />
+                <TechItem icon={SiNestjs} text="Nestjs" />
+                <TechItem icon={SiExpress} text="Express.js" />
+                <TechItem icon={SiPostgresql} text="Postgres" />
+                <TechItem icon={SiMongodb} text="MongoDB" />
+                <TechItem icon={SiDocker} text="Docker" />
+                <TechItem icon={SiNpm} text="Npm" />
+                <TechItem icon={SiReact} text="React.js" />
+                <TechItem icon={SiNextJs} text="Next.js" />
+                <TechItem icon={SiRedux} text="Redux" />
+                <TechItem icon={SiVuedotjs} text="Vue.js" />
+                <TechItem icon={SiTailwindCSS} text="TailwindCSS" />
+                <TechItem icon={SiSass} text="Scss" />
+                <TechItem icon={SiAmazonaws} text="Aws" />
+                <TechItem icon={SiFlutter} text="Flutter" />
+                <TechItem icon={SiGithub} text="Github" />
+                <TechItem icon={SiVisualstudiocode} text="VSCode" />
             </div>
 
             <h2 className="font-medium text-3xl mb-4">Projects 🛠️</h2>
@@ -89,8 +92,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
                 </a>
                 , so I can learn from others and showcase what I know. In total, all of my open sourced projects have
                 earnt me <span className="font-bold text-black dark:text-slate-200">{stats.stars}</span> stars on
-                GitHub. Below
-                are some of my most popular repositories.
+                GitHub. Below are some of my most popular repositories.
             </p>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 ">
                 {topRepos.map((repo: Record<string, any>) => {
@@ -109,7 +111,6 @@ const Index = ({ stats, topRepos }: AppProps) => {
         </motion.div>
     );
 };
-
 
 export async function getStaticProps() {
     const stats = await fetch(`https://api.github-star-counter.workers.dev/user/Seemo0`).then(res => res.json());
