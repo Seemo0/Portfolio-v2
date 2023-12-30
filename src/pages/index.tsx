@@ -14,7 +14,7 @@ import {
     SiTypescript,
     SiRedux,
     SiNpm,
-    SiFlutter,
+    SiPython,
     SiAmazonaws,
     SiMongodb,
     SiNestjs,
@@ -60,6 +60,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
             </p>
             <div className="grid grid-cols-3  sm:grid-cols-4 rounded-md border-slate-800 hover:border-sky-400  border-x-2 border-y-2 p-2 font-light  mb-6">
                 <TechItem icon={SiTypescript} text="TypeScript" />
+                <TechItem icon={SiPython} text="Python" />
                 <TechItem icon={SiGit} text="Git" />
                 <TechItem icon={SiNodeJs} text="Node.js" />
                 <TechItem icon={SiNestjs} text="Nestjs" />
@@ -75,14 +76,14 @@ const Index = ({ stats, topRepos }: AppProps) => {
                 <TechItem icon={SiTailwindCSS} text="TailwindCSS" />
                 <TechItem icon={SiSass} text="Scss" />
                 <TechItem icon={SiAmazonaws} text="Aws" />
-                <TechItem icon={SiFlutter} text="Flutter" />
+                <TechItem icon={SiReact} text="React Native" />
                 <TechItem icon={SiGithub} text="Github" />
                 <TechItem icon={SiVisualstudiocode} text="VSCode" />
             </div>
 
             <h2 className="font-medium text-3xl mb-4">Projects 🛠️</h2>
             <p className="text-gray-800 dark:text-gray-300 leading-6 font-light tracking-wide mb-6">
-                In my free time, I enjoy creating open source projects on{" "}
+                In my free time, I enjoy creating open source projects on
                 <a
                     href="https://github.com/Seemo0"
                     rel="noreferrer"
