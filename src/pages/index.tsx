@@ -19,7 +19,7 @@ import {
     SiMongodb,
     SiNestjs,
     SiPostgresql,
-    SiDocker
+    SiDocker,
 } from "react-icons/si";
 import { TechItem } from "../components/TechItem";
 import RepoItem from "../components/RepoItem";
@@ -120,7 +120,7 @@ export async function getStaticProps() {
     );
 
     const topRepos = repos
-        .sort((a: Record<string, any>, b: Record<string, any>) => b.stargazers_count - a.stargazers_count)
+        ?.sort((a: Record<string, any>, b: Record<string, any>) => b.stargazers_count - a.stargazers_count)
         .slice(0, 4);
 
     return {

@@ -23,7 +23,7 @@ const Talk = () => {
             <TimeStatus />
 
             <div className="grid ml-30 grid-cols-1 md:grid-cols-3 md:gap-4 mb-20 ">
-                <MessageComponent />
+                {/* <MessageComponent /> */}
 
                 <div className="row-start-1 md:row-auto">
                     <ContactLink
@@ -41,9 +41,9 @@ const Talk = () => {
                     />
 
                     <ContactLink
-                        name="mohamedouallal08@gmail.com"
+                        name="email"
                         icon={<FiMail className="w-6 h-6 text-gray-400" />}
-                        link="mailto:contactsemoo@gmail.com"
+                        link="mailto:mohamedouallal02@gmail.com"
                         borderColor="hover:border-gray-400/50"
                     />
                 </div>
