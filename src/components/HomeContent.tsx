@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
+"use client";
 
+import { motion } from "framer-motion";
 import {
     SiVisualstudiocode,
     SiGit,
@@ -20,16 +21,18 @@ import {
     SiNestjs,
     SiPostgresql,
     SiDocker,
+    SiSpringboot,
+    SiAngular
 } from "react-icons/si";
-import { TechItem } from "../components/TechItem";
-import RepoItem from "../components/RepoItem";
+import { TechItem } from "./TechItem";
+import RepoItem from "./RepoItem";
 
-interface AppProps {
+interface HomeContentProps {
     stats: Record<string, number>;
-    topRepos: Record<any, any>;
+    topRepos: Array<Record<string, any>>;
 }
 
-const Index = ({ stats, topRepos }: AppProps) => {
+export default function HomeContent({ stats, topRepos }: HomeContentProps) {
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -38,7 +41,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
             transition={{ ease: "easeOut", duration: 0.15 }}
             className="mt-24 w-full mb-32"
         >
-            <h1 className="mt-36 font-bold text-4xl md:text-5xl mb-4">Hey, I'm Semo 👋</h1>
+            <h1 className="mt-36 font-bold text-4xl md:text-5xl mb-4">Hey, I'm Mohamed 👋</h1>
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
                 I'm a software developer from Morocco. I'm currently pursuing full-stack web development to create
                 stunning user experiences on the front-end, and scalable and secure infrastructure on the backend.
@@ -59,20 +62,20 @@ const Index = ({ stats, topRepos }: AppProps) => {
                 use currently.
             </p>
             <div className="grid grid-cols-3  sm:grid-cols-4 rounded-md border-slate-800 hover:border-sky-400  border-x-2 border-y-2 p-2 font-light  mb-6">
+                <TechItem icon={SiSpringboot} text="Spring Boot" />
+                <TechItem icon={SiDocker} text="Docker" />
+                <TechItem icon={SiNestjs} text="Nestjs" />
+                <TechItem icon={SiAngular} text="Angular" />
+                <TechItem icon={SiNextJs} text="Next.js" />
                 <TechItem icon={SiTypescript} text="TypeScript" />
                 <TechItem icon={SiPython} text="Python" />
                 <TechItem icon={SiGit} text="Git" />
                 <TechItem icon={SiNodeJs} text="Node.js" />
-                <TechItem icon={SiNestjs} text="Nestjs" />
                 <TechItem icon={SiExpress} text="Express.js" />
                 <TechItem icon={SiPostgresql} text="Postgres" />
                 <TechItem icon={SiMongodb} text="MongoDB" />
-                <TechItem icon={SiDocker} text="Docker" />
-                <TechItem icon={SiNpm} text="Npm" />
                 <TechItem icon={SiReact} text="React.js" />
-                <TechItem icon={SiNextJs} text="Next.js" />
                 <TechItem icon={SiRedux} text="Redux" />
-                <TechItem icon={SiVuedotjs} text="Vue.js" />
                 <TechItem icon={SiTailwindCSS} text="TailwindCSS" />
                 <TechItem icon={SiSass} text="Scss" />
                 <TechItem icon={SiAmazonaws} text="Aws" />
@@ -96,37 +99,17 @@ const Index = ({ stats, topRepos }: AppProps) => {
                 GitHub. Below are some of my most popular repositories.
             </p>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 ">
-                {topRepos.map((repo: Record<string, any>) => {
-                    return (
-                        <RepoItem
-                            key={repo.name}
-                            name={repo.name}
-                            description={repo.description}
-                            stars={repo.stargazers_count}
-                            forks={repo.forks_count}
-                            language={repo.language}
-                        />
-                    );
-                })}
+                {topRepos.map(repo => (
+                    <RepoItem
+                        key={repo.name}
+                        name={repo.name}
+                        description={repo.description}
+                        stars={repo.stargazers_count}
+                        forks={repo.forks_count}
+                        language={repo.language}
+                    />
+                ))}
             </div>
         </motion.div>
     );
-};
-
-export async function getStaticProps() {
-    const stats = await fetch(`https://api.github-star-counter.workers.dev/user/Seemo0`).then(res => res.json());
-    const repos = await fetch(`https://api.github.com/users/Seemo0/repos?type=owner&per_page=100`).then(res =>
-        res.json()
-    );
-
-    const topRepos = repos
-        ?.sort((a: Record<string, any>, b: Record<string, any>) => b.stargazers_count - a.stargazers_count)
-        .slice(0, 4);
-
-    return {
-        props: { stats, topRepos },
-        revalidate: 3600,
-    };
 }
-
-export default Index;

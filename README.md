@@ -11,4 +11,4 @@
 - Uses TailwindCSS, for easy light/dark theme configuration
 
 
-<sub>**Semo**</sub>
+<sub>**Mohamed**</sub>

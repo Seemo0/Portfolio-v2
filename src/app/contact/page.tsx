@@ -1,11 +1,11 @@
-import ContactLink from "../components/talk/ContactLink";
-import { SiTwitter, SiDiscord } from "react-icons/si";
+"use client";
+
+import ContactLink from "../../components/talk/ContactLink";
 import { FiMail } from "react-icons/fi";
 import { motion } from "framer-motion";
-import TimeStatus from "../components/talk/TimeStatus";
-import MessageComponent from "../components/talk/MessageComponent";
+import TimeStatus from "../../components/talk/TimeStatus";
 
-const Talk = () => {
+export default function ContactPage() {
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -23,23 +23,7 @@ const Talk = () => {
             <TimeStatus />
 
             <div className="grid ml-30 grid-cols-1 md:grid-cols-3 md:gap-4 mb-20 ">
-                {/* <MessageComponent /> */}
-
                 <div className="row-start-1 md:row-auto">
-                    <ContactLink
-                        name="Semo#2790"
-                        icon={<SiDiscord className="w-6 h-6 text-[#5865F2]" />}
-                        link="https://discord.com/channels/@Semo#2790"
-                        borderColor="hover:border-[#5865F2]/50"
-                    />
-
-                    <ContactLink
-                        name="@semo_ou7"
-                        icon={<SiTwitter className="w-6 h-6 text-[#1DA1F2]" />}
-                        link="https://twitter.com/semo_ou7"
-                        borderColor="hover:border-[#1DA1F2]/50"
-                    />
-
                     <ContactLink
                         name="email"
                         icon={<FiMail className="w-6 h-6 text-gray-400" />}
@@ -50,8 +34,4 @@ const Talk = () => {
             </div>
         </motion.div>
     );
-};
-
-
-
-export default Talk;
+}

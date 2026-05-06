@@ -1,10 +1,11 @@
-import React from "react";
+"use client";
+
 import { motion } from "framer-motion";
 
-const Talk = () => {
+export default function NotFound() {
     return (
         <motion.div
-            key="talk"
+            key="not-found"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
@@ -15,6 +16,4 @@ const Talk = () => {
             <p className="text-black dark:text-gray-200 mb-6">It appears that what you're looking for isn't here.</p>
         </motion.div>
     );
-};
-
-export default Talk;
+}

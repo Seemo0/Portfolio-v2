@@ -1,8 +1,10 @@
+"use client";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { SiTwitter, SiGithub, SiLinkedin } from "react-icons/si";
 import { FiMail } from "react-icons/fi";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 import { classNames } from "../util/classNames";
 import { ReactElement, useState } from "react";
@@ -16,7 +18,7 @@ const LandingButton = ({ name, link, selected }: { name: string; link: string; s
                 selected
                     ? "bg-black/10 dark:bg-[#c8c8dc]/10"
                     : "bg-transparent hover:bg-gray-700/5 dark:hover:bg-[#c8c8dc]/5 dark:text-white",
-                "cursor-pointer px-4 py-2 text-sm rounded-md text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-75"
+                "cursor-pointer px-4 py-2 text-sm rounded-md text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-75",
             )}
         >
             {name}
@@ -42,7 +44,7 @@ const MobileLandingButton = ({
                 selected
                     ? "bg-black/10 dark:bg-[#c8c8dc]/10"
                     : "bg-transparent hover:bg-gray-700/5 dark:hover:bg-[#c8c8dc]/5 dark:text-white",
-                "cursor-pointer px-4 py-2 text-sm rounded-md text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-75"
+                "cursor-pointer px-4 py-2 text-sm rounded-md text-black/80 hover:text-black dark:text-white/80 dark:hover:text-white transition-all duration-75",
             )}
             onClick={onClick}
         >
@@ -60,7 +62,7 @@ const LinkButton = ({ icon, href }: { icon: ReactElement; href: string }) => {
 };
 
 const Nav = () => {
-    const router = useRouter();
+    const pathname = usePathname();
 
     const [mobileMenuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
@@ -72,18 +74,14 @@ const Nav = () => {
             <motion.div className="hidden z-[999] fixed w-[90%] md:w-[50rem] xs:flex flex-row justify-between items-center px-4 py-2 mt-4 md:mt-6 rounded-md bg-white/60 dark:bg-[#00c0e3]/20 border border-slate-500/40 backdrop-blur-lg">
                 <div className="flex flex-row items-center justify-between gap-2">
                     <ThemeToggle />
-                    <LandingButton name="Home" link="/" selected={router.pathname === "/"} />
-                    <LandingButton name="Contact" link="/contact" selected={router.pathname === "/contact"} />
+                    <LandingButton name="Home" link="/" selected={pathname === "/"} />
+                    <LandingButton name="Contact" link="/contact" selected={pathname === "/contact"} />
                 </div>
 
                 <div className="flex flex-row items-center justify-center gap-2 xs:gap-4">
                     <LinkButton
                         href={"https://github.com/Seemo0"}
                         icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
-                    />
-                    <LinkButton
-                        href={"https://twitter.com/semo_ou7"}
-                        icon={<SiTwitter className="w-6 h-6 cursor-pointer" />}
                     />
                     <LinkButton
                         href={"https://linkedin.com/in/mohamedouallal"}
@@ -132,13 +130,13 @@ const Nav = () => {
                                 <MobileLandingButton
                                     name="Home"
                                     link="/"
-                                    selected={router.pathname === "/"}
+                                    selected={pathname === "/"}
                                     onClick={() => setMenuOpen(false)}
                                 />
                                 <MobileLandingButton
                                     name="Contact"
                                     link="/contact"
-                                    selected={router.pathname === "/contact"}
+                                    selected={pathname === "/contact"}
                                     onClick={() => setMenuOpen(false)}
                                 />
                             </div>
